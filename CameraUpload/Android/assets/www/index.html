@@ -38,11 +38,13 @@
     function selectPicture() {
         navigator.camera.getPicture(
             function(uri) {
+            	alert(uri);
                 var img = document.getElementById('camera_image');
                 img.style.visibility = "visible";
                 img.style.display = "block";
                 img.src = uri;
                 document.getElementById('camera_status').innerHTML = "Success";
+                alert('compleated');
             },
             function(e) {
                 console.log("Error getting picture: " + e);
