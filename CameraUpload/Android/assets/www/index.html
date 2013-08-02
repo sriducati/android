@@ -36,7 +36,9 @@
      * Select picture from library
      */
     function selectPicture() {
+    	alert('iam in selection mode');
         navigator.camera.getPicture(
+        	alert('iam in navigation mode');
             function(uri) {
             	alert(uri);
                 var img = document.getElementById('camera_image');
